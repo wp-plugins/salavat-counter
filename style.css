@@ -1,0 +1,55 @@
+/* rtl */
+.salavat-counter.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+
+
+/* ltr */
+.salavat-counter.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+
+
+/* all */
+.widget_salavat_shomar .awaiting-mod {
+  background-color: #8ea658;
+  border-radius: 10px;
+  clear: both;
+  color: #fff;
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 17px;
+  margin: 10px auto;
+  text-align: center;
+  vertical-align: top;
+  width: 95%;
+  z-index: 26;
+}
+
+.widget_salavat_shomar .awaiting-mod span {
+  display: block;
+  font-size: 12pt;
+  padding: 10px 6px;
+  word-wrap: break-word;
+}
+
+.salavat-counter p {
+  font-size: 1em;
+  text-align: center;
+}
+
+.salavat-counter .sc-say-salavat {
+  background: none repeat scroll 0 0 #8ea658;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-family: tahoma;
+  font-weight: bold;
+  padding: 6px;
+}
