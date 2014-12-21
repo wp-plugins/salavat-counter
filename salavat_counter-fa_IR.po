@@ -1,22 +1,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: salavat counter\n"
-"POT-Creation-Date: 2014-10-19 14:24+0330\n"
-"PO-Revision-Date: 2014-10-19 14:24+0330\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-12-21 13:12+0330\n"
+"PO-Revision-Date: 2014-12-21 13:14+0330\n"
+"Last-Translator: wp-master.ir <wp@wp-master.ir>\n"
 "Language-Team: \n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-KeywordsList: _;_e;__\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: index.php:28 index.php:29 index.php:34 index.php:53
+#: index.php:28 index.php:29 index.php:34 index.php:53 index.php:150
+#: index.php:163
 msgid "salavat counter"
 msgstr "صلوات شمار"
 
@@ -24,13 +25,70 @@ msgstr "صلوات شمار"
 msgid "title"
 msgstr "عنوان"
 
-#: index.php:61
+#: index.php:127
+msgid "for"
+msgstr "برای"
+
+#: index.php:131
 msgid "salavat was saied till now!"
 msgstr "صلوات تا اکنون فرستاده شده است!"
 
-#: index.php:63
+#: index.php:136
 msgid "say 1 salavat"
 msgstr "صلوات بفرستید"
+
+#: index.php:140
+msgid "for working salavat counter javascript is needed."
+msgstr "برای کارکرد صلوات شمار،جاوا اسکریپت نیاز است."
+
+#: index.php:177
+msgid "say salavat for:"
+msgstr "فرستادن صلوات برای:"
+
+#: index.php:182
+msgid ""
+"if you want to use any subject for salavats fill it , otherwise leave it "
+"empty"
+msgstr ""
+"اگر نیتی در ارسال صلواتها دارید این گزینه را تکمیل کنید،در غیر این صورت آن "
+"را خالی بگذارید."
+
+#: index.php:187
+msgid "submit"
+msgstr "ثبت"
+
+#: index.php:191
+msgid "Usage:"
+msgstr "نحوه استفاده:"
+
+#: index.php:193
+msgid "widget"
+msgstr "ابزارک"
+
+#: index.php:193
+msgid "you can use salavat counter widget "
+msgstr "میتوانید از ابزارک صلوات شمار استفاده کنید"
+
+#: index.php:194
+msgid "shortcode"
+msgstr "کدکوتاه"
+
+#: index.php:194
+msgid ""
+"you can use [salavat_counter] shortcode in anywhere you want,posts,pages,... "
+msgstr ""
+"با استفاده از کدکوتاه  [salavat_counter] میتوانید صلوات شمار را در هرجای "
+"پستها،برگه ها،... نمایش دهید"
+
+#: index.php:195
+msgid "theme"
+msgstr "قالب،کد"
+
+#: index.php:195
+msgid "use this code anywhere in your theme codes:"
+msgstr ""
+"با استفاده از این کد میتوانید صلوات شمار را در هرجای کد و قالب خود جایگذاری "
+"کنید:"
 
 #~ msgid "Simple"
 #~ msgstr "ساده"

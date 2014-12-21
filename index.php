@@ -4,7 +4,7 @@ Plugin Name: صلوات شمار
 Plugin URI : http://wp-master.ir
 Author: wp-master.ir
 Author URI: http://wp-master.ir
-Version: 0.1
+Version: 0.2
 url:http://wp-master.ir
 */
 
@@ -53,23 +53,8 @@ class widget_salavat_shomar extends WP_Widget
 	$title = empty($instance['title']) ? __('salavat counter' , __SC__) : apply_filters('widget_title', $instance['title']);
 	echo $before_widget;
 	echo $before_title . $title . $after_title;
-
-  $counter = get_option( __SC__.'_counter', 0 );
-  if(is_rtl()) { $class = 'rtl'; } else{ $class = 'ltr'; }
-	?>
-  <div class="salavat-counter <?php echo $class; ?>">
-    <p><span class="awaiting-mod"><span class="pending-count sc-padding-count"> <?php echo $counter; ?></span></span><?php _e('salavat was saied till now!' , __SC__); ?></p>
-    <p>
-      <img width="200" src="<?php echo plugin_dir_url(__FILE__).'salavat.gif'; ?>">
-    </p>
-    <p>
-      <button class="sc-say-salavat"> <img src="<?php echo plugin_dir_url(__FILE__); ?>/ajax-loader.gif" style="display:none;"> <?php _e('say 1 salavat' , __SC__); ?> <img src="<?php echo plugin_dir_url(__FILE__); ?>/ajax-loader.gif" style="display:none;"></button>
-    </p>
-
-  </div>
-	<?php
-
-	echo $after_widget;
+  salavat_counter_make_form();
+  echo $after_widget;
   }
  
 }
@@ -112,5 +97,104 @@ function salavat_counter_head()
 {
   ?>
   <script type="text/javascript"> var sc_ajaxurl = '<?php echo admin_url('admin-ajax.php');?>';</script>
+  <?php
+}
+
+
+
+/*
+salavat shortcod
+*/
+add_shortcode('salavat_counter' , 'salavat_counter_shortcode');
+function salavat_counter_shortcode(){
+    salavat_counter_make_form(true,true);
+}
+
+
+/*
+make salavat counter form
+*/
+function salavat_counter_make_form($echo=true , $shortcode=false){
+  $html = '';
+  $counter = get_option( __SC__.'_counter', 0 );
+  $counter_for = get_option( __SC__.'_counter_for', 0 );
+  if(is_rtl()) { $class = 'rtl'; } else{ $class = 'ltr'; }
+  if($shortcode) { $class .= ' shortcode'; }
+  $html .='
+  <noscript> <div style="display:none;" </noscript>
+  <div class="salavat-counter '.$class.'">';
+    if($counter_for != ''){
+      $html .= '<p class="salavat-for">'.__('for' , __SC__).': <br/><span>'.$counter_for.'</span></p>';
+    }
+
+   $html .='
+    <p><span class="awaiting-mod"><span class="pending-count sc-padding-count"> '.$counter.'</span></span>'.__('salavat was saied till now!' , __SC__).'</p>
+    <p>
+      <img class="salavat_gif" width="200" src="'.plugin_dir_url(__FILE__).'salavat.gif">
+    </p>
+    <p>
+      <button class="sc-say-salavat"><img class="ajax_loader_gif" src="'.plugin_dir_url(__FILE__).'/ajax-loader.gif" style="display:none;">&nbsp;&nbsp;&nbsp;'.__('say 1 salavat' , __SC__).'&nbsp;&nbsp;&nbsp;<img class="ajax_loader_gif" src="'.plugin_dir_url(__FILE__).'/ajax-loader.gif" style="display:none;"></button>
+    </p>
+
+  </div>';
+  $html .= '<noscript> </div><p>'.__('for working salavat counter javascript is needed.' , __SC__).'</p> </noscript>';
+  if($echo) echo $html; else  return $html;
+}
+
+
+/*
+admin page
+*/
+add_action('admin_menu', '_salavat_counter_admin_fn');
+function _salavat_counter_admin_fn(){
+  add_options_page( __('salavat counter' , __SC__), __('salavat counter' , __SC__), 'manage_options' , __SC__ , 'salavat_counter_admin_fn');
+}
+
+function salavat_counter_admin_fn(){
+  ?>
+  <style type="text/css">
+
+  </style>
+  <?php
+  $class = 'ltr';
+  if(is_rtl()) { $class = 'rtl'; } else{ $class = 'ltr'; }
+  ?>
+  <div class="salavat_counter_admin <?php echo $class; ?>">
+    <h2><?php _e('salavat counter' , __SC__); ?></h2>
+    <div class="content">
+      <?php
+      if(isset($_POST['salavat_for'])){
+          update_option( __SC__.'_counter_for' , esc_sql($_POST['salavat_for']));
+        }
+        $counter_for = get_option( __SC__.'_counter_for', '' );
+
+      ?>
+      <form method="post">
+      <table class="form-table">
+        <tbody>
+          <tr>
+          <th scope="row">
+          <label for="salavat_for"><?php _e('say salavat for:' , __SC__); ?></label>
+          </th>
+
+          <td>
+          <input id="salavat_for" class="regular-text" type="text" value="<?php echo $counter_for; ?>" name="salavat_for">
+          <p class="description"> <?php _e('if you want to use any subject for salavats fill it , otherwise leave it empty' , __SC__); ?> </p>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="submit"><input type="submit" value="<?php _e('submit' , __SC__); ?>" class="button button-primary" id="submit" name="submit"></p>
+      </form>
+    </div>
+    <hr/>
+    <h2><?php _e('Usage:' , __SC__); ?></h2>
+    <div class="content">
+      <b><?php _e('widget',__SC__); ?> : </b><?php _e('you can use salavat counter widget ' , __SC__); ?> <br/>
+      <b><?php _e('shortcode',__SC__); ?> : </b><?php _e('you can use [salavat_counter] shortcode in anywhere you want,posts,pages,... ' , __SC__); ?> <br/>
+     <b><?php _e('theme',__SC__); ?> : </b> <?php _e('use this code anywhere in your theme codes:' , __SC__); ?> <br/><textarea style="width:400px; height:40px; direction:ltr;background:#222;color:#fff;"><?php echo '<?php do_shortcode(\'[salavat_counter]\'); ?>'; ?></textarea>
+
+    </div>
+  </div>
   <?php
 }
