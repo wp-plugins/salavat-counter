@@ -8,7 +8,7 @@ Version: 0.2
 url:http://wp-master.ir
 */
 
-define(__SC__ , 'salavat_counter');
+define('__SC__' , 'salavat_counter');
 /*
 * load plugin language
 */
