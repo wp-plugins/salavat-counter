@@ -1,22 +1,25 @@
 <?php
 /*
-Plugin Name: صلوات شمار
+Plugin Name: Salavat counter
 Plugin URI : http://wp-master.ir
+Description: Salavat counter in widget and shortcode mode
 Author: wp-master.ir
 Author URI: http://wp-master.ir
-Version: 0.2
+Version: 0.3
 url:http://wp-master.ir
+Text Domain: salavat_counter
 */
 
-define(__SC__ , 'salavat_counter');
+define('__SC__' , 'salavat_counter');
 /*
 * load plugin language
 */
 add_action( 'plugins_loaded', 'salavac_counter_widget_lang');
 function salavac_counter_widget_lang()
 {
-  load_plugin_textdomain( __SC__, false, dirname( plugin_basename( __FILE__ ) ).DIRECTORY_SEPARATOR);
+  load_plugin_textdomain( __SC__, false, dirname( plugin_basename( __FILE__ ) ));
 }
+__('Salavat counter in widget and shortcode mode' , __SC__);
 
 /*
 * widget class
@@ -124,11 +127,11 @@ function salavat_counter_make_form($echo=true , $shortcode=false){
   <noscript> <div style="display:none;" </noscript>
   <div class="salavat-counter '.$class.'">';
     if($counter_for != ''){
-      $html .= '<p class="salavat-for">'.__('for' , __SC__).': <br/><span>'.$counter_for.'</span></p>';
+      $html .= '<p class="salavat-for"><span class="salavat-for-title">'.__('for' , __SC__).': </span><br/><span class="salavat-for-text">'.$counter_for.'</span></p>';
     }
 
    $html .='
-    <p><span class="awaiting-mod"><span class="pending-count sc-padding-count"> '.$counter.'</span></span>'.__('salavat was saied till now!' , __SC__).'</p>
+    <p><span class="awaiting-mod"><span class="pending-count sc-padding-count"> '.$counter.'</span></span><span class="sc-till-now">'.__('salavat was saied till now!' , __SC__).'</span></p>
     <p>
       <img class="salavat_gif" width="200" src="'.plugin_dir_url(__FILE__).'salavat.gif">
     </p>
@@ -147,7 +150,7 @@ admin page
 */
 add_action('admin_menu', '_salavat_counter_admin_fn');
 function _salavat_counter_admin_fn(){
-  add_options_page( __('salavat counter' , __SC__), __('salavat counter' , __SC__), 'manage_options' , __SC__ , 'salavat_counter_admin_fn');
+  add_options_page( __('Salavat counter' , __SC__), __('Salavat counter' , __SC__), 'manage_options' , __SC__ , 'salavat_counter_admin_fn');
 }
 
 function salavat_counter_admin_fn(){

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: salavat counter\n"
-"POT-Creation-Date: 2014-12-21 13:12+0330\n"
-"PO-Revision-Date: 2014-12-21 13:14+0330\n"
+"POT-Creation-Date: 2015-01-02 09:06+0330\n"
+"PO-Revision-Date: 2015-01-02 09:06+0330\n"
 "Last-Translator: wp-master.ir <wp@wp-master.ir>\n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -16,8 +16,11 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: index.php:28 index.php:29 index.php:34 index.php:53 index.php:150
-#: index.php:163
+#: index.php:18
+msgid "Salavat counter in widget and shortcode mode"
+msgstr "صلوات شمار در حالتهای ابزارک و کدکوتاه"
+
+#: index.php:28 index.php:29 index.php:34 index.php:53 index.php:163
 msgid "salavat counter"
 msgstr "صلوات شمار"
 
@@ -40,6 +43,10 @@ msgstr "صلوات بفرستید"
 #: index.php:140
 msgid "for working salavat counter javascript is needed."
 msgstr "برای کارکرد صلوات شمار،جاوا اسکریپت نیاز است."
+
+#: index.php:150
+msgid "Salavat counter"
+msgstr "صلوات شمار"
 
 #: index.php:177
 msgid "say salavat for:"
