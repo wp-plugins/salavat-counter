@@ -1,6 +1,5 @@
 jQuery(function ($) {
-	var scss = $('.sc-say-salavat');
-	$('body').on('click', scss, function () {
+	$('body').on('click', '.sc-say-salavat', function () {
 		sc_padding_count = $('.sc-padding-count');
 		var __this = $(this);
 		__this.find('img').css('display', 'inline');
