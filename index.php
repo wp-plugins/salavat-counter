@@ -5,7 +5,7 @@ Plugin URI : http://wp-master.ir
 Description: Salavat counter in widget and shortcode mode
 Author: wp-master.ir
 Author URI: http://wp-master.ir
-Version: 0.3
+Version: 0.4
 url:http://wp-master.ir
 Text Domain: salavat_counter
 */
@@ -101,6 +101,7 @@ function salavat_counter_head()
   ?>
   <script type="text/javascript"> var sc_ajaxurl = '<?php echo admin_url('admin-ajax.php');?>';</script>
   <?php
+  if(get_option( __SC__.'_salavat_display_image', 'true' ) != 'true'){ echo '<style type="text/css" media="all"> .salavat-counter img.salavat_gif{display:none !important;} </style>'; }
 }
 
 
@@ -168,8 +169,10 @@ function salavat_counter_admin_fn(){
       <?php
       if(isset($_POST['salavat_for'])){
           update_option( __SC__.'_counter_for' , esc_sql($_POST['salavat_for']));
+          update_option( __SC__.'_salavat_display_image' , esc_sql($_POST['salavat_display_image']));
         }
         $counter_for = get_option( __SC__.'_counter_for', '' );
+        $salavat_display_image = get_option( __SC__.'_salavat_display_image', '' );
 
       ?>
       <form method="post">
@@ -179,10 +182,18 @@ function salavat_counter_admin_fn(){
           <th scope="row">
           <label for="salavat_for"><?php _e('say salavat for:' , __SC__); ?></label>
           </th>
-
+          <th scope="row">
+          <label for="salavat_for"><?php _e('Display image?' , __SC__); ?></label>
+          </th>
+		  </tr>
+		  <tr>
           <td>
           <input id="salavat_for" class="regular-text" type="text" value="<?php echo $counter_for; ?>" name="salavat_for">
           <p class="description"> <?php _e('if you want to use any subject for salavats fill it , otherwise leave it empty' , __SC__); ?> </p>
+          </td>
+		  <td>
+          <input id="salavat_display_image" class="regular-text" type="checkbox" value="true" <?php if($salavat_display_image=='true'){ echo 'checked'; } ?> name="salavat_display_image">
+          <p class="description"> <?php _e('show image or not' , __SC__); ?> </p>
           </td>
           </tr>
         </tbody>
