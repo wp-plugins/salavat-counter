@@ -5,7 +5,7 @@ Plugin URI : http://wp-master.ir
 Description: Salavat counter in widget and shortcode mode
 Author: wp-master.ir
 Author URI: http://wp-master.ir
-Version: 0.4
+Version: 0.5
 url:http://wp-master.ir
 Text Domain: salavat_counter
 */
@@ -111,7 +111,7 @@ salavat shortcod
 */
 add_shortcode('salavat_counter' , 'salavat_counter_shortcode');
 function salavat_counter_shortcode(){
-    salavat_counter_make_form(true,true);
+    return salavat_counter_make_form(false,true);
 }
 
 
