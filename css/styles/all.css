@@ -1,0 +1,74 @@
+.salavatcounter-corner{
+	position: fixed;
+	z-index: 1110000;
+	height: 45px;
+	width: 80px;
+}
+.salavatcounter-corner-top-left{
+	left: 0;
+	top: 0;
+}
+
+.salavatcounter-corner-top-right{
+	right: 0;
+	top: 0;
+}
+
+.salavatcounter-corner-top-center{
+	right: 0;
+	left:0;
+	top: 0;
+	margin:0 auto;
+}
+
+.salavatcounter-corner-bottom-right{
+	right: 0;
+	bottom: 0;
+}
+
+.salavatcounter-corner-bottom-left{
+	left: 0;
+	bottom: 0;
+}
+
+.salavatcounter-corner-bottom-center{
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin:0 auto;
+}
+.salavatacounter-count {
+  color: #fff;
+  display: block;
+  font-size: 10pt;
+  height: 27px;
+  text-align: center;
+  overflow:hidden;
+}
+
+.salavatcounter-add-salavat {
+  background-color: red;
+  display: block;
+  height: 18px;
+  cursor: pointer;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+.salavatcounter-add-salavat:hover{
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.3)";
+  filter: alpha(opacity=0.3);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+}
+.salavat-counter-ajax-loader{
+	display: block;
+	margin:6px auto auto auto;
+  padding-bottom: 10px;
+	width: 11px;
+}
+.salavat-ajax-loader.salavat-counter-ajax-loader{display:none;}
