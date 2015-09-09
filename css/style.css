@@ -1,0 +1,159 @@
+/* rtl */
+.salavat-counter.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+
+
+/* ltr */
+.salavat-counter.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+
+
+/* all */
+.widget_salavat_shomar .awaiting-mod  , .salavat-counter .shortcode.salavat-counter .awaiting-mod , .salavat-counter .awaiting-mod {
+  clear: both;
+  color: #fff;
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 17px;
+  margin: 10px auto;
+  text-align: center;
+  vertical-align: top;
+  width: 95%;
+  z-index: 26;
+}
+
+.widget_salavat_shomar .awaiting-mod span , .salavat-counter .shortcode.salavat-counter .awaiting-mod span , .salavat-counter .awaiting-mod span{
+  display: block;
+  font-size: 12pt;
+  padding: 10px 6px;
+  word-wrap: break-word;
+}
+
+.salavat-counter p {
+  font-size: 1em;
+  text-align: center;
+}
+
+.salavat-counter .sc-say-salavat {
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-family: tahoma;
+  font-weight: bold;
+  line-height: 14px !important;
+  padding: 6px;
+  width: 90%;
+}
+.salavat-counter.salavat-rounded .sc-say-salavat {border-radius: 3px;}
+.widget_salavat_shomar.salavat-rounded .awaiting-mod  , .salavat-counter.salavat-rounded .shortcode.salavat-counter.salavat-rounded .awaiting-mod , .salavat-counter.salavat-rounded .awaiting-mod {
+  border-radius: 10px;
+}
+.salavat-counter img.salavat_gif {
+  display: block;
+  margin: auto;
+  width: 95%;
+}
+.shortcode.salavat-counter {
+  margin: auto;
+  width: 300px !important;
+}
+.salavat-for span {
+  font-size: 1.3em;
+  text-align: center;
+  width: 95%;
+}
+
+/**** Themes *****/
+/*
+* blue
+*/
+.salavat-counter.blue .sc-say-salavat {
+  background: #3366ff !important;
+  color: #fff !important;
+}
+.widget_salavat_shomar.blue .awaiting-mod  , .salavat-counter.blue .shortcode.salavat-counter .awaiting-mod , .salavat-counter.blue .awaiting-mod {
+  background-color: #3366ff;
+}
+
+/*
+* green
+*/
+.salavat-counter.green .sc-say-salavat {
+  background: #8ea658 !important;
+  color: #fff !important;
+}
+.widget_salavat_shomar.green .awaiting-mod  , .salavat-counter.green .shortcode.salavat-counter .awaiting-mod , .salavat-counter.green .awaiting-mod {
+  background-color: #8ea658;
+}
+
+/*
+* lajevardi
+*/
+.salavat-counter.lajevardi .sc-say-salavat {
+  background: #0047AB !important;
+  color: #fff !important;
+}
+.widget_salavat_shomar.lajevardi .awaiting-mod  , .salavat-counter.lajevardi .shortcode.salavat-counter .awaiting-mod , .salavat-counter.lajevardi .awaiting-mod {
+  background-color: #0047AB;
+}
+
+/*
+* orange
+*/
+.salavat-counter.orange .sc-say-salavat {
+  background: #ff9900 !important;
+  color: #fff !important;
+}
+.widget_salavat_shomar.orange .awaiting-mod  , .salavat-counter.orange .shortcode.salavat-counter .awaiting-mod , .salavat-counter.orange .awaiting-mod {
+  background-color: #ff9900;
+}
+
+/*
+* phosphor
+*/
+.salavat-counter.phosphor .sc-say-salavat {
+  background: #99cc00 !important;
+  color: #fff !important;
+}
+.widget_salavat_shomar.phosphor .awaiting-mod  , .salavat-counter.phosphor .shortcode.salavat-counter .awaiting-mod , .salavat-counter.phosphor .awaiting-mod {
+  background-color: #99cc00;
+}
+
+/*
+* pink
+*/
+.salavat-counter.pink .sc-say-salavat {
+  background: #CC01F8 !important;
+  color: #fff !important;
+}
+.widget_salavat_shomar.pink .awaiting-mod  , .salavat-counter.pink .shortcode.salavat-counter .awaiting-mod , .salavat-counter.pink .awaiting-mod {
+  background-color: #CC01F8;
+}
+
+/*
+* red
+*/
+.salavat-counter.red .sc-say-salavat {
+  background: #FF1111 !important;
+  color: #fff !important;
+}
+.widget_salavat_shomar.red .awaiting-mod  , .salavat-counter.red .shortcode.salavat-counter .awaiting-mod , .salavat-counter.red .awaiting-mod {
+  background-color: #FF1111;
+}
+
+/*
+* yellow
+*/
+.salavat-counter.yellow .sc-say-salavat {
+  background: #E6C301 !important;
+  color: #fff !important;
+}
+.widget_salavat_shomar.yellow .awaiting-mod  , .salavat-counter.yellow .shortcode.salavat-counter .awaiting-mod , .salavat-counter.yellow .awaiting-mod {
+  background-color: #E6C301;
+}
