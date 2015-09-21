@@ -71,6 +71,13 @@
 
 /**** Themes *****/
 /*
+* old ver
+*/
+.old-ver .pending-count {
+  background-color: #6eb10e;
+  color: #fff;
+}
+/*
 * blue
 */
 .salavat-counter.blue .sc-say-salavat {

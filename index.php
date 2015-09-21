@@ -5,7 +5,7 @@ Plugin URI : http://wp-master.ir
 Author: wp-master.ir
 Author URI: http://wp-master.ir
 Description: salavat-counter
-Version: 0.8
+Version: 0.8.5
 Text Domain: salavatcounter
 */
 
@@ -419,6 +419,7 @@ function salavat_counter_make_form($echo = true, $shortcode = false, $id = false
     if (!$id) {
         $counter = get_option(__SC__ . '_counter', 0);
         $counter_for = get_option(__SC__ . '_counter_for', 0);
+		$class[] = 'old-ver';
     } else {
         $row = $wpdb->get_row($wpdb->prepare("select * from $salavatcounter where id=%d", $id));
         $counter = $row->salavat;
