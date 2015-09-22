@@ -385,7 +385,7 @@ function salavat_counter_shortcode($atts)
     if (isset($atts['id'])) {
         $id = $atts['id'];
     }
-    salavat_counter_make_form(false, true, $id);
+    return salavat_counter_make_form(false, true, $id);
 }
 
 
