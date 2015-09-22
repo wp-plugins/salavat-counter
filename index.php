@@ -5,7 +5,7 @@ Plugin URI : http://wp-master.ir
 Author: wp-master.ir
 Author URI: http://wp-master.ir
 Description: salavat-counter
-Version: 0.8.5
+Version: 0.8.6
 Text Domain: salavatcounter
 */
 
@@ -120,20 +120,6 @@ function salavatcounter_user_styles_scripts($hook)
 
 add_action('wp_enqueue_scripts', 'salavatcounter_user_styles_scripts');
 add_action('admin_enqueue_scripts', 'salavatcounter_user_styles_scripts');
-
-
-/**
- * plugin shortcode
- */
-function salavatcounter_shortcode()
-{
-    $html = '<div id="salavat-counter">';
-    $html .= 'salavatcounter shortcode contents here';
-    $html .= '</div> <!-- end of #salavat-counter --> ';
-    return $html;
-}
-
-add_shortcode('salavatcounter_shortcode', 'salavatcounter_shortcode');
 
 
 /**
@@ -399,7 +385,7 @@ function salavat_counter_shortcode($atts)
     if (isset($atts['id'])) {
         $id = $atts['id'];
     }
-    salavat_counter_make_form(true, true, $id);
+    salavat_counter_make_form(false, true, $id);
 }
 
 
